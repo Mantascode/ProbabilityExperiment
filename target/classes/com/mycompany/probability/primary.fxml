@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="420.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.probability.PrimaryController">
+   <left>
+      <VBox prefHeight="264.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Fill box with balls">
+               <VBox.margin>
+                  <Insets left="30.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Red">
+                     <HBox.margin>
+                        <Insets right="17.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="redText" maxWidth="50.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="159.0" spacing="10.0">
+               <children>
+                  <Label text="Yellow">
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="yellowText" maxWidth="50.0" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Blue">
+                     <HBox.margin>
+                        <Insets right="14.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="blueText" maxWidth="50.0" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <Label text="Fill box with balls of three different colors. Count probability" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <Separator maxWidth="5.0" minWidth="5.0" orientation="VERTICAL" prefHeight="266.0" prefWidth="5.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="266.0" prefWidth="261.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="18.0" layoutY="14.0" text="What is expected to be pulled out of the box?" />
+            <Label layoutX="103.0" layoutY="63.0" text="Red" />
+            <Label layoutX="96.0" layoutY="98.0" text="Yellow" />
+            <Label layoutX="102.0" layoutY="131.0" text="Blue" />
+            <ComboBox fx:id="redCombo" layoutX="148.0" layoutY="59.0" prefWidth="70.0" />
+            <ComboBox fx:id="yellowCombo" layoutX="148.0" layoutY="94.0" prefWidth="70.0" />
+            <ComboBox fx:id="blueCombo" layoutX="148.0" layoutY="127.0" prefWidth="70.0" />
+            <Label layoutX="28.0" layoutY="162.0" text="How many throws?" />
+            <ComboBox fx:id="countCombo" layoutX="148.0" layoutY="158.0" prefWidth="70.0" />
+            <Button fx:id="countButton" layoutX="122.0" layoutY="207.0" mnemonicParsing="false" onAction="#count" text="Count it!" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="50.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <Label fx:id="answeLabel" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" top="40.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </bottom>
+</BorderPane>
